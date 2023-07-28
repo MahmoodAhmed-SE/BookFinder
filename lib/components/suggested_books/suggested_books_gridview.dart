@@ -21,7 +21,6 @@ class _SuggestedBooksGridViewState extends State<SuggestedBooksGridView> {
     fetchSuggestedBooks().then(
       (value) {
         computerSubject = value;
-        Provider.of<BooksProvider>(context, listen: false).setSuggestedBooks(computerSubject!.works);
       },
     );
   }
